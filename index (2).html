@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- EDIT: browser-tab title & the description Google shows in search results -->
+<title>Jordan Avery — PhD Candidate, Computer Science</title>
+<meta name="description" content="Jordan Avery is a PhD candidate in Computer Science working on machine learning systems.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- The whole design lives in this one shared file. A future page
+     (blog.html, papers.html, ...) just links the same file and looks identical. -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===========================================================
+     TOP BAR
+     Right now every link jumps to a section further down THIS page
+     (the "#name" links are on-page anchors).
+
+     >>> TO ADD A SEPARATE PAGE LATER (e.g. a blog):
+         1. Create a new file, e.g. blog.html, by copying this file
+            and replacing the <body> contents with your blog list.
+         2. Change the matching link below from an on-page anchor
+            like  href="#publications"  to a real page  href="blog.html".
+         That's the whole switch — nothing else moves.
+     =========================================================== -->
+<header class="bar">
+  <div class="wrap">
+    <span class="name">Jordan Avery</span>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#research">research</a>
+      <a href="#publications">papers</a>   <!-- later: href="papers.html" -->
+      <a href="#news">news</a>             <!-- later: add href="blog.html" -->
+    </nav>
+  </div>
+</header>
+
+<!-- ===========================================================
+     HERO  —  name, one-line pitch, key links
+     =========================================================== -->
+<section class="hero">
+  <div class="wrap">
+    <!-- Optional status line. Delete this <div> if you don't want it. -->
+    <div class="status fade"><span class="dot"></span>Open to summer 2026 research internships</div>
+
+    <h1 class="fade d1">Jordan Avery</h1>
+
+    <p class="tagline fade d2">
+      PhD candidate in <b>Computer Science</b> at Example University, building
+      <b>machine learning systems</b> that stay reliable when they leave the lab.
+    </p>
+
+    <div class="links fade d3">
+      <!-- EDIT every href. Delete any link you don't use. Drop cv.pdf next to this file. -->
+      <a class="btn primary" href="mailto:jordan@example.edu">Email</a>
+      <a class="btn" href="cv.pdf">CV (PDF)</a>
+      <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
+      <a class="btn" href="https://github.com/">GitHub</a>
+      <a class="btn" href="https://orcid.org/">ORCID</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     ABOUT
+     =========================================================== -->
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">about</p>
+    <h2>Short bio</h2>
+    <p class="lead">
+      I'm a third-year PhD candidate advised by <a href="#">Prof. A. Mentor</a> in the
+      Systems &amp; Learning Group. My research sits at the boundary of machine learning and
+      systems: I care about <em>why</em> models fail once they're deployed, and how to make
+      training and inference cheaper without quietly trading away robustness.
+    </p>
+    <p class="lead">
+      Before the PhD I completed my BSc at Example University, where I worked on
+      distributed training. Outside research I help organize our department's reading group
+      and mentor undergraduates getting into research.
+    </p>
+  </div>
+</section>
+
+<!-- ===========================================================
+     RESEARCH
+     If this section grows long, it's the natural first candidate to
+     become its own research.html — the styles for a full project page
+     (.page-head, .project) are already waiting in style.css.
+     =========================================================== -->
+<section id="research">
+  <div class="wrap">
+    <p class="eyebrow">research</p>
+    <h2>What I work on</h2>
+    <p class="lead">A few threads I'm actively pulling on:</p>
+    <div class="tags">
+      <span class="tag">ML systems</span>
+      <span class="tag">distribution shift</span>
+      <span class="tag">efficient inference</span>
+      <span class="tag">evaluation</span>
+      <span class="tag">reproducibility</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     PUBLICATIONS  —  newest first. Copy a <li> block to add one.
+     Wrap your own name in <span class="me">…</span> to highlight it.
+     =========================================================== -->
+<section id="publications">
+  <div class="wrap">
+    <p class="eyebrow">publications</p>
+    <h2>Selected papers</h2>
+    <ol class="pubs">
+
+      <li>
+        <div>
+          <div class="pub-title">Measuring What Breaks: A Benchmark for Silent Model Failures</div>
+          <div class="pub-authors"><span class="me">J. Avery</span>, B. Coauthor, C. Advisor</div>
+          <span class="pub-venue"><span class="badge">NeurIPS 2025</span> · Conference on Neural Information Processing Systems</span>
+          <div class="pub-links"><a href="#">PDF</a><a href="#">arXiv</a><a href="#">code</a><a href="#">bibtex</a></div>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="pub-title">Cheaper Inference Without the Robustness Tax</div>
+          <div class="pub-authors"><span class="me">J. Avery</span>, D. Collaborator</div>
+          <span class="pub-venue"><span class="badge">ICML 2025</span> · International Conference on Machine Learning</span>
+          <div class="pub-links"><a href="#">PDF</a><a href="#">arXiv</a><a href="#">code</a></div>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="pub-title">Notes on Distribution Shift in Production Pipelines</div>
+          <div class="pub-authors">E. Student, <span class="me">J. Avery</span>, C. Advisor</div>
+          <span class="pub-venue">Workshop on Trustworthy ML, 2024</span>
+          <div class="pub-links"><a href="#">PDF</a><a href="#">bibtex</a></div>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ===========================================================
+     NEWS  —  optional. Delete the whole <section> if unwanted.
+     =========================================================== -->
+<section id="news">
+  <div class="wrap">
+    <p class="eyebrow">news</p>
+    <h2>Recent</h2>
+    <ul class="news">
+      <li><span class="when">May 2026</span><span class="what">Paper accepted to NeurIPS 2025. 🎉</span></li>
+      <li><span class="when">Mar 2026</span><span class="what">Gave a talk at the department systems seminar.</span></li>
+      <li><span class="when">Jan 2026</span><span class="what">Started a research internship at Example Labs.</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Jordan Avery</span>
+    <span>Dept. of Computer Science · Example University</span>
+    <span><a href="mailto:jordan@example.edu">jordan@example.edu</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
